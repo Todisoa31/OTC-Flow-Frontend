@@ -1,0 +1,10 @@
+services:
+  otcflow-frontend:
+    image: otcflow-frontend:${NEXT_DEPLOY_VERSION}
+    ports:
+      - "3000:3000"
+    environment:
+      - "NODE_ENV=production"
+    restart: always
+    env_file:
+      - ./.env

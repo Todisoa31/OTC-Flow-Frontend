@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@plugin "daisyui";
+
+/* ======= Variables CSS (thème) ======= */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --dark-blue: #3A5F6E;
+  --primary-blue: #65A5BF;
+  --secondary-blue: #9BCADC;
+  --red: #C80043;
+  --black-secondary: #101828;
+  --white: #FFFFFF;
+  --secondary-white: #FEFEFE;
+  --grey: #646E81;
+  --primary-orange: #fbc467;
+  --grey-transparent: rgba(58, 95, 110, 0.10);
+  --primary-green: #65bfaa;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* ======= Structure principale de la page ======= */
+html,
+body {
+  color: var(--background);
+  background: var(--foreground);
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+#__next {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Utilisé pour les pages avec contenu principal + pagination */
+.page-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+/* ======= Dégradé vidéo (si utilisé) ======= */
+.overlay-video {
+  background: linear-gradient(0deg, rgba(101, 165, 191, 0.50) 0%, rgba(101, 165, 191, 0.50) 100%);
+  background-blend-mode: plus-darker;
+}
+
+/* ======= Couleurs de contours personnalisées ======= */
+.outline-grey {
+  outline-color: var(--grey);
+}
+
+.outline-primary-blue {
+  outline-color: var(--primary-blue);
+}
+
+.outline-primary-green {
+  outline-color: var(--primary-green);
+}
+
+.outline-primary-orange {
+  outline-color: var(--primary-orange);
+}
+
+.bg-grey-transparent{
+  background-color: var(--grey-transparent);
+}
+
+.outline-pink-500 {
+  outline-color: rgb(236 72 153 / var(--tw-bg-opacity, 1));
+}
+
+/* ======= Toastify (notifications) ======= */
+.Toastify__toast-container .Toastify__toast {
+  width: auto;
+  max-width: 50vw;
+}
+
+/* ======= Scrollbar personnalisée ======= */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--grey);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--secondary-white);
+  border-radius: 10px;
+}
+
+.custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #65A5BF var(--secondary-white);
+}
+iframe{
+  width: 100%;
+  height: 100%;
+}

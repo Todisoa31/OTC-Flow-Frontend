@@ -1,0 +1,23 @@
+# Node modules
+/node_modules/
+
+# Build output
+/.next/
+/out/
+
+# Production
+/.env.local
+/.env.*.local
+/.env.production
+.env
+# Logs
+npm-debug.log*
+
+# VS Code settings
+.vscode/
+
+# Next.js cache
+.next/cache/
+
+# TypeScript
+*.tsbuildinfo
